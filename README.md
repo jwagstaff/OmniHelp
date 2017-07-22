@@ -39,7 +39,7 @@ Files use a simple versioning scheme that allows you to upload new versions of t
 
 If you choose to, you may include all of your files for your entire project in the root design.  This is the standard method for most design project hosting services but it is not the recommended patterns.  To discourse this pattern files structures within a given project are intentionally flat -- you may not have folders or directories within your files record.  This is to encourage modularity and allow for better reuse of designs between projects.  A better pattern would be to only include assembly level CAD files or project doumentation in the root design files record, and then distribute the CAD files for each part in the respective design for that component.
 
-### Specs: Technical specification and documentation
+### Specs describe Designs
 
 Specifications allow you to classify and document your design data with as much or as little precision as needed. Basic Data includes a part class, short description, part number, and a part image. It is highly recommended to include these details for each design in your library.  If you need to include more detailed specificaitons for you design, custom data allow you to add your own fields, values.  These might include weight, material, color, tensile strength, resistance, etc.
 
