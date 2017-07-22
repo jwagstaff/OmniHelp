@@ -5,13 +5,6 @@
 
 OmniBuilds is a tool for tracking engineering designs.  Every *thing* in OmniBuilds is ultimately a design, whether it a single part, an entire project, or any level of assembly in between.  Naming conventions are a question of perspective.  For example, imagine a sensor that included a Printed Circuit Board (PCB), an enclosure, and some fasteners.  It could exist as its own independent design project, or that project could be embedded in the Bill of Materials (BOM) of a larger project, as an assembly.  If the sensor could be purchased as a single component from a supplier, then it could also exist as an individual part with no assembly.  It just depends on how it is being used in the context of your design and your parts library.
 
-### Designs are made up of records
-
-Each design is comprised of three main records.
-1. Parts: A bill of materials (BOM) that includes a cost, quantity, and tracking point for each part.
-2. Files: A list of attached design files
-3. Specs: Technical specifications and documentation
-
 ### Designs are Modular
 
 Any design can be embedded into any other design.  The only exception is that a design cannot be emdedded within itself, either as the direct child in the assembly tree, or any lower level as a descendant of itself.  This allows you to build a library of resusable components very quickly.  Every design you create is automatically added to your parts libary, allowing it to easily be referenced and imported into any other design you create.
