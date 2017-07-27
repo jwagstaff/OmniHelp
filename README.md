@@ -51,23 +51,35 @@ A key concept associated with tracking is the notion of a design prototype.  Thi
 
 ### Part Numbers are Auto-Generated
 
-Every design also has a corresponding, auto-generated part number, which serves as a succint human readable reference to the composite state of the design at any given time, and is useful when embedding a design in the BOM of another design.  A part number consists of four hyphenated alphanumeric codes.  For example, TP1-0001-100-A1 represents the initial part number for Test Part 1, with a database key ending in 0001, with a design class code of 100 (high level assembly), on the Alpha Configuration, Revision 1.  You cannot change or override the auto-generated part number.  However, you can provide an optional internal part number as well as unique part number for each of your manufacturers or suppliers.  The codes break down as follows:
+Every design also has a corresponding, auto-generated part number, which serves as a succint human readable reference to the composite state of the design at any given time.  Part numbers allow us to track designs within other design at a specific version.  A design becomes a 'part' whenever it is embedded in the BOM of another design.  Since designs are versioned, we need to know exactly which version the design has been embedded at.  The part number is the specific reference that allows us to do that.
 
-#### 1. Design Name Abbreviation
+A part number consists of four hyphenated alphanumeric codes.  For exmaple, if the first design you create is named My First Design, the part # would be MFD-0001-100-A0.  This represents the initial part number for My First Design (MFD), being the first in the sequence of your private parts library (0001), with the design class for an Assembly/Top Level SKU (100), and at the base version/revision of the alpha configuration (A0).
 
-The first code is a simple abbreviaiton of the design name that condenses it down to the first letter of every word along with any digits, excluding any non-alphanumeric characters (spaces, commas, hyphens, etc).  When used properly this allows you to embed intelligent numbering schemes into your parts library.  For example, all of your resistors could start with the name resistor and be followed by the resistance value, so Resistor 40 becomes R40 or Heax Head Bolt 7 MM would become HHB7MM.  Whenever the design name changes, the abbreviation code will also change.
+#### First Code: Design Name Abbreviation
 
-#### 2. Last Four Digits of the Design's Primary Key
+The first code is a simple abbreviaiton of the design name that condenses it down to the first letter of every word along with any digits, excluding any non-alphanumeric characters (spaces, commas, hyphens, etc).  When used properly this allows you to embed intelligent numbering schemes into your parts library.  For example, all of your resistors could start with the name resistor and be followed by the resistance value, so Resistor 40 becomes R40 or Heax Head Bolt 7 MM would become HHB7MM.  Whenever the design name changes, the abbreviation code will also change.  Design names may be locked in order to prevent name changes from altering the part number.  This is recommended after a design has passed from active development to production.
 
-In the event that you have two part names with the same abbreviation, such as Vacuum Pump and Variable Potentiometer, the last four digits of the database primary key make up the next code.  This is to prevent duplicate part numbers and naming collissions.  In case you are wondering, you would need over 100,000 parts in your library to have a statisticly signfiicant chance of a colission based on the first two codes alone, which raises to above 10 Million when adding in the final two codes.  The Design's primary key will never change, and this code will never change in part number.
+#### Second Code: Sequence in your Private Parts Library
 
-#### 3. Design Class Code
+The second code represents the order in which the design was created, or the sequence, within your private parts library.  So the first design you create would be 0001 and the 100th design would be 0100.  This allows you to have a rough idea of when the design was created, and prevents namespace collisions for two parts that have the same abbreviations.  Individual accounts are given four digits (10,000 unique parts), team accounts are given five digits (100,000 unique parts), and organizational accounts are given six digits (1,000,000 unique parts).  If parts are deleted ti does not affect the sequencing of new parts, the sequence numbers are not resused.  Since the sequence number will never change for a part, this code will never change for a given part number.
+
+#### Third Code: Design Class Code
 
 On creation each design is given a class, which is a three digit code reflecting the level of hiearchy for the design, what type of design it is, and any material or fabrication properties specific to the design.  This is further explained below in the specs discussion.  Suffice to say, any time a new design project is created from the dashboard it will be given a code of 300 -- Generic Top Level Assembly -- when it is created.  Whenever a new part is created from within the BOM tab of an existing design, it will be given the code of 100 -- Generic Part.  As the BOMs for these designs change there design class will correct itself accordingly.  A design class may also be set manually in the Specs tab for a design.
 
-#### 4. Tracking Point
+#### Fourth Code: Tracking Point
 
-The tracking point denotes the specific version of the design that the part number refers to.  This means that a given design can have as many different part numbers as it has revs, but in most cases only one, or just a few of those will actually be in use at any time.  If a design is being tracked at a rev then the tracking point will read as the first letter of the config followed by the rev number: A11 or B38.  If that rev also refers to a build then the build name will be follow the part number in parantheses: TP1-0001-100-A11 (Conceptual Design).  If the part is being tracked at the latest version of a given config, or in mirror mode, then only the tracking point will be the full config name: TP1-0001-100-ALPHA
+The tracking point denotes the specific version of the design that the part number refers to.  This means that a given design actually has as many part numbers as it has configs, revs, and builds.  In reality though, only one, or a few of these, will be in use at any given time.  This is just a function of how the part is being tracked in the BOM of whatever design/s it is embedded in.  If a part is tracked strictly, by a rev or a build, it's tracking point will refelct the rev # or build name.  If a part is being mirrored at the latest revision for a config, then the tracking point will be the config name.
+
+Part tracked at Rev A15          ->   MFP-0001-100-A15
+Part tracked at Prototype Build  ->   MFP-0001-100-A27: Prototype
+Part tracked at Alpha Config     ->   MFP-0001-100-ALPHA
+
+#### Handling Changes in Part Numbers
+
+At first glance, it may seem strange that a single design can have so many different part numbers.  Keeping track of all these different part numbers, especially within the context of an organizaiton, would be a nightmare, right?  In reality, only one, or a few of these part numbers will be in use at a given time, in a physical sense.  The part numbering system is organized so that anytime the underlying data in your design changes, the part number will change accordingly.  If the name changes, the abbreviation will change.  If the class changes, the code will change.  And most importantly, if the version changes, the tracking point code will change.  
+
+If we are still in the design process, and have not actually manufactured the part, then none of these versions or changes really matter yet.  It is not until a version is marked as a build that we would expect to actually produce something.  At this point the name should be locked, as well as the design class.  As long as the part is embedded in the production BOM at the build (or rev behind the build) then that is the only part number that really matters.  And while the underlying design (for the part) may continue to change over time, from the point of view of the production BOM and the embedded part, these changes are irrelevant (because the part has been locked at a given tracking point).  If the form, fit, or function of the part changes and this needs to be pushed to manufacturing, then the part number would and should change, but only after it has been manually updated by the owner of the BOM.  
 
 
 ### Files are CAD Agnostic
