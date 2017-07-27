@@ -72,9 +72,7 @@ On creation each design is given a class, which is a three digit code reflecting
 The tracking point denotes the specific version of the design that the part number refers to.  This means that a given design actually has as many part numbers as it has configs, revs, and builds.  In reality though, only one, or a few of these, will be in use at any given time.  This is just a function of how the part is being tracked in the BOM of whatever design/s it is embedded in.  If a part is tracked strictly, by a rev or a build, it's tracking point will refelct the rev # or build name.  If a part is being mirrored at the latest revision for a config, then the tracking point will be the config name.
 
 Part tracked at Rev A15          ->   MFP-0001-100-A15
-
 Part tracked at Prototype Build  ->   MFP-0001-100-A27: Prototype
-
 Part tracked at Alpha Config     ->   MFP-0001-100-ALPHA
 
 #### Handling Changes in Part Numbers
