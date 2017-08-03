@@ -65,9 +65,7 @@ The second code represents the order in which the design was created, or the seq
 
 #### Third Code: Design Class Code
 
-Revise
-
-At creation, each design is given a class, which is a three-digit code reflecting the level of hierarchy for the design, what type of design it is, and any material or fabrication properties specific to the design.  This is further explained below in the specs discussion.  Suffice to say, any time a new design project is created from the dashboard it will be given a code of 300 -- Generic Top Level Assembly -- when it is created.  Whenever a new part is created from within the BOM tab of an existing design, it will be given the code of 100 -- Generic Part.  As the BOMs for these designs change their design class will correct itself accordingly.  A design class may also be set manually in the Specs tab for a design.
+At creation, each design is given a class.  The class is a three-digit code reflecting the level of hierarchy for the design, what type of design it is, and any material or fabrication properties specific to the design.  This is discussed further in the specs section.  Suffice to say, any time a new design project is created from the dashboard it will be given a code of 100 -- Generic Top Level Assembly -- when created.  Whenever a new part is created from within the BOM tab of an existing design, it will be given the code of 102 -- Generic Sub-Assembly or Part.  As each BOM for these designs change their design class will correct itself accordingly.  A design class may also be set manually in the Specs tab for a design.
 
 #### Fourth Code: Tracking Point
 
