@@ -1,5 +1,8 @@
-
-## How OmniBuilds Works
+---
+layout: home
+title: How OmniBuilds Works
+permalink: /
+---
 
 ### Everything is a Design
 
