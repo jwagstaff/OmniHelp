@@ -25,7 +25,3 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
-
-# Plugins
-plugins:
-  - jekyll-redirect-from
