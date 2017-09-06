@@ -3,5 +3,28 @@
 ---
 
 @import "minima";
+@import url('https://fonts.googleapis.com/css?family=Exo:300');
 @import "customizations.css";
-@import url('https://fonts.googleapis.com/css?family=Exo');
+
+
+/* Theme */
+
+.site-title {
+  font: 30px 'Exo', sans-serif;
+  line-height: 54px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+/* Footer */
+
+.footer-heading {
+  font-size: 1.25em;
+  color: rgb(0, 0, 0);
+}
+
+.footer-col-3 {
+  text-align: right;
+}

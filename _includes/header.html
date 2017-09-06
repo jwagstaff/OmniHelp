@@ -1,8 +1,12 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
+
     <a href="https://www.omnibuilds.com" class="site-nav page-link">Back to OmniBuilds.com</a>
-    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" href="{{ "/" | relative_url }}">
+      <i class="fa fa-cogs" aria-hidden="true"></i>
+      {{ site.title | escape }}
+    </a>
 
     {% if page_paths %}
       <nav class="site-nav">
