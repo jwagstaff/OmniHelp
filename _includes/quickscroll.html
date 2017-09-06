@@ -1,0 +1,16 @@
+<nav class="quick-scroll">
+  <label for="quick-scroll">
+    <span class="menu-icon">
+      hello
+    </span>
+  </label>
+
+  <div class="trigger">
+    {% for article in articles %}
+      {% assign curr_page = site.pages | where: "path", path | first %}
+      {% if my_page.title %}
+      <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
