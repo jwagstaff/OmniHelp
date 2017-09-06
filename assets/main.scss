@@ -7,13 +7,30 @@
 @import "customizations.css";
 
 
+/* Variables */
+
+$primary-color: rgb(85, 85, 85);
+
+
 /* Theme */
 
 .site-title {
   font: 30px 'Exo', sans-serif;
   line-height: 54px;
+
   &:hover {
     text-decoration: none;
+  }
+}
+
+.site-nav {
+
+  &:visited {
+    color: $primary-color
+  }
+
+  &:hover {
+    color: $primary-color
   }
 }
 
