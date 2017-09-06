@@ -4,18 +4,19 @@
 
 @import "minima";
 @import url('https://fonts.googleapis.com/css?family=Exo:300');
-@import "customizations.css";
 
 
 /* Variables */
 
 $primary-color: rgb(85, 85, 85);
+$primary-font: 'Exo', sans-serif;
 
 
-/* Theme */
+/* Header */
 
 .site-title {
-  font: 30px 'Exo', sans-serif;
+  font: 30px $primary-font;
+  color: $primary-color;
   line-height: 54px;
 
   &:hover {
