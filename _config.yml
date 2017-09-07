@@ -15,8 +15,8 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# header_pages:
-# - index.md
+header_pages:
+# - README.md
 # - omnibuilds.md
 
 # Build settings
@@ -28,3 +28,7 @@ exclude:
 
 # Plugins
 # plugins:
+  # -
+
+# Analytics
+google_analytics: UA-105971114-1
