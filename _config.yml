@@ -17,7 +17,7 @@ minima:
 # this and add the path to the pages in order as they should show up
 header_pages:
 # - README.md
-- omnibuilds.md
+# - omnibuilds.md
 
 # Build settings
 markdown: kramdown
@@ -27,8 +27,8 @@ exclude:
   - Gemfile.lock
 
 # Plugins
-plugins:
-  - jekyll-redirect-from
+# plugins:
+  # -
 
 # Analytics
 google_analytics: UA-105971114-1
