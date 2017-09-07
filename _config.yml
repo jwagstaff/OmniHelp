@@ -29,3 +29,6 @@ exclude:
 # Plugins
 plugins:
   - jekyll-redirect-from
+
+# Analytics
+google_analytics: UA-105971114-1
