@@ -11,7 +11,7 @@ A help guide for [OmniBuilds.com][omnibuilds].
 ### Install/Run
 1. Clone this directory
 2. Install all gems for site `bundle install`
-3. Build site on preview server `bundle exec jekyll serve`
+3. Build site on preview server: `bundle exec jekyll serve` or build site including articles in /_drafts/: `bundle exec jekyll serve --drafts`
 4. Visit http://localhost:4000
 
 ### Authors
