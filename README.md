@@ -26,3 +26,4 @@ This project is licensed under the [GNU GENERAL PUBLIC LICENSE][gnu].
 [bundler]: https://bundler.io/
 [jeremiah]: https://www.linkedin.com/in/jeremiah-wagstaff-483b5057/
 [joanne]: https://linkedin.com/in/jttyeung
+[gnu]: LICENSE
