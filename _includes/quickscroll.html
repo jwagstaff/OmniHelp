@@ -1,22 +1,12 @@
 <nav class="quick-scroll">
   <label for="quick-scroll">
-    <span class="menu-icon">
-      hello
-    </span>
+    <div class="menu-icon">
+      Select Topic:
+      {% for category in site.categories %}
+        <li><a name="{{ category | first }}">{{ category | first }}</a>
+        </li>
+        </div>
+      {% endfor %}
+    </div>
   </label>
-
-  <div class="trigger">
-    {% for category in site.categories %}
-      <li><a name="{{ category | first }}">{{ category | first }}</a>
-        <ul>
-        {% for articles in category %}
-          {% for article in articles %}
-            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
-          {% endfor %}
-        {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-
-  </div>
 </nav>
