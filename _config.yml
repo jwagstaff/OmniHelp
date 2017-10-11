@@ -22,6 +22,11 @@ header_pages:
 # Link slug for each help article
 permalink: /articles/:title/
 
+category_weights:
+  # values:
+    2: "Getting Started"
+    1: "Login & Registration"
+
 # Build settings
 markdown: kramdown
 theme: minima
