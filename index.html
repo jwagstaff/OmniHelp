@@ -4,17 +4,19 @@ title: How OmniBuilds Works
 permalink: /
 ---
 
+
 <div id="categories">
-  {% assign categories = site.categories | sort: site.categories[category_name] %}
-  {% for category in categories %}
+  {% assign sorted_categories = site.categories | sort: site.categories[category_name] %}
+  {% for category in sorted_categories %}
     <div class="category-group">
+      {% assign sorted_articles = category[1] | sort: 'weight' %}
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div id="#{{ category_name | slugize }}"></div>
       <h3 class="category-head">{{ category_name }}</h3>
       <a name="{{ category_name | slugize }}"></a>
-      {% for article in site.categories[category_name] %}
+      {% for article in sorted_articles %}
         <article class="post">
-          <h4><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></h4>
+          <h4><a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a></h4>
         </article>
       {% endfor %}
     </div>
