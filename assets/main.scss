@@ -29,6 +29,7 @@ $spacing: 100px;
 }
 
 .site-nav {
+  border: 0px;
 
   &:visited {
     color: $primary-color;
@@ -37,7 +38,14 @@ $spacing: 100px;
   &:hover {
     color: $primary-color;
   }
+
+  @include media-query($on-palm) {
+    font-size: 80%;
+  }
 }
+
+
+
 
 .top-menu {
   max-width: -webkit-calc(#{$menu-width} - (#{$spacing} * 2));
@@ -85,6 +93,11 @@ $spacing: 100px;
 
 .footer-col-3 {
   text-align: right;
+
+  @include media-query($on-laptop) {
+    text-align: left;
+    padding-top: 20px;
+  }
 }
 
 
