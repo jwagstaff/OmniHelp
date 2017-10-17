@@ -8,7 +8,6 @@
       {{ site.title | escape }}
     </a>
 
-    {% include search_bar.html %}
 
     {% if page_paths %}
       <nav class="site-nav">
@@ -34,4 +33,7 @@
       </nav>
     {% endif %}
   </div>
+
+  {% include search_bar.html %}
+
 </header>

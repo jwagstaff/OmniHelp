@@ -35,7 +35,7 @@ exclude:
   - Gemfile.lock
 
 # Plugins
-plugins: ['jekyll-lunr-js-search']
+plugins: ['jekyll-lunr-js-search', 'jekyll-octicons']
 
 # Analytics
 google_analytics: UA-105971114-1
