@@ -11,12 +11,14 @@ A help guide for [OmniBuilds.com][omnibuilds].
 ### Install/Run
 1. Clone this directory
 2. Install all gems for site `bundle install`
-3. Build site on preview server: `bundle exec jekyll serve` or build site including articles in /_drafts/: `bundle exec jekyll serve --drafts`
+3. Build site on preview server: `bundle exec jekyll serve` 
+<br>or build site including articles in /_drafts/: `bundle exec jekyll serve --drafts`
 4. Visit http://localhost:4000
 
 ### Authors
-[Jeremiah Wagstaff][jeremiah] is the founder and a full-stack engineer.
-[Joanne Yeung][joanne] is a full-stack engineer.
+[Jeremiah Wagstaff][jeremiah] is the founder and full-stack engineer.<br>
+[Joanne Yeung][joanne] is a full-stack engineer.<br>
+[Jake Pimental][jake]
 
 ### License
 This project is licensed under the [GNU GENERAL PUBLIC LICENSE][gnu].
@@ -28,4 +30,5 @@ This project is licensed under the [GNU GENERAL PUBLIC LICENSE][gnu].
 [bundler]: https://bundler.io/
 [jeremiah]: https://www.linkedin.com/in/jeremiah-wagstaff-483b5057/
 [joanne]: https://linkedin.com/in/jttyeung
+[jake]: https://www.linkedin.com/in/jake-pimental-35353572/
 [gnu]: LICENSE

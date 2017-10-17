@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Login
-category: "Login & Registration"
+title: Sample Post
+category: "Example Category"
 weight: 0
 ---
 

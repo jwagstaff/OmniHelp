@@ -38,5 +38,8 @@ exclude:
 # plugins:
   # -
 
+#Gems
+gems: ['jekyll-lunr-js-search']
+
 # Analytics
 google_analytics: UA-105971114-1
