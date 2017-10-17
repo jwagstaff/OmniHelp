@@ -15,7 +15,7 @@ $body-width: 1100px;
 $spacing: 100px;
 
 
-/* Header & */
+/* Header */
 
 .site-title {
   margin: auto;
@@ -45,7 +45,7 @@ $spacing: 100px;
 }
 
 
-
+/* Layout */
 
 .top-menu {
   max-width: -webkit-calc(#{$menu-width} - (#{$spacing} * 2));
@@ -112,4 +112,12 @@ $spacing: 100px;
   padding: 0 0 45px 0;
 }
 
+/* Formatting */
+.category-head {
+  font-size: 22px !important;
+  // color: hsl(0, 0%, 40%);
+}
 
+h4 {
+  font-size: 17px !important;
+}
