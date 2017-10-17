@@ -8,14 +8,18 @@
 
 /* Variables */
 
+$shaded-background: hsl(0, 0%, 93%);
 $primary-color: rgb(85, 85, 85);
 $primary-font: 'Exo', sans-serif;
 $menu-width: auto;
 $body-width: 1100px;
 $spacing: 100px;
 
-
 /* Header */
+
+.site-header {
+  background-color: $shaded-background;
+}
 
 .site-title {
   margin: auto;
@@ -85,6 +89,21 @@ $spacing: 100px;
 
 
 /* Footer */
+
+footer {
+  background-color: $shaded-background;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  min-height: 80px;
+  max-height: 80px;
+  align-items: center; /* align vertical */
+
+  @include media-query($on-laptop) {
+    min-height: 170px;
+    max-height: 170px;
+  }
+}
 
 .footer-heading {
   font-size: 1.25em;
