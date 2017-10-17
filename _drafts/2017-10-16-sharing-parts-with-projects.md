@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sharing Parts between Projects
-category: "Exploring Projects on Omnibuilds"
+title: Sharing Parts Between Projects
+category: "2. Exploring Projects on Omnibuilds"
 weight: 3
 ---

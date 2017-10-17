@@ -1,12 +1,8 @@
 ---
 layout: post
 title: How OmniBuilds Works
-category: "Getting Started"
-<<<<<<< HEAD
+category: "1. Getting Started"
 weight: 1
-=======
-weight: 0
->>>>>>> 32cd67e181c159a4e0688892b0adad6f746a43ed
 ---
 
 OmniBuilds is a tool for tracking engineering designs.  Every *thing* in OmniBuilds is ultimately a design, whether it a single part, an entire project, or any level of assembly in between.  Naming conventions are a question of perspective.  Designs can be organized into three main classes based on their relationship to one another: design projects, design assemblies, and design parts.  This class will always depend on the context of the design project that a design is embedded into.

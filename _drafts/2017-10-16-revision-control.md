@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cloning Projects
+title: Revision Control
 category: "2. Exploring Projects on Omnibuilds"
-weight: 7
+weight: 4
 ---
