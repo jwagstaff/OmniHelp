@@ -2,6 +2,7 @@
 layout: post
 title: The OmniBuilds Mission 
 category: "Getting Started"
+weight: 0
 ---
 
 
