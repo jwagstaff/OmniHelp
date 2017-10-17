@@ -19,8 +19,6 @@ GEM
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
     forwardable-extended (2.6.0)
     gemoji (3.0.0)
     github-pages (158)
@@ -213,8 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  font-awesome-sass
   github-pages
 
 BUNDLED WITH
-   1.12.5
+   1.15.4
