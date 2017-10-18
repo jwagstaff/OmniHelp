@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Revision Control
+title: Projects, Assemblies, and Parts 
 category: "2. Exploring Projects on OmniBuilds"
-weight: 4
+weight: 1
 ---
+
+sadfasdf

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navigating Your Dashboard
+title: Navigating the User Dashboard
 category: "1. Getting Started"
 weight: 4
 ---
