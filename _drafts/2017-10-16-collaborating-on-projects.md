@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sharing Designs Between Projects
+title: Collaborating on Projects
 category: "2. Exploring Projects on OmniBuilds"
-weight: 3
+weight: 8
 ---

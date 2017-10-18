@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Projects, Assemblies, and Parts 
+title: Sharing Designs Between Projects
 category: "2. Exploring Projects on OmniBuilds"
-weight: 3
+weight: 4
 ---
-
