@@ -46,10 +46,9 @@ This list displays the most recent parts you have created or modified. You will 
 
 
 
-#### Next Steps ####
+<!---#### Next Steps ####
 
 [Creating Your First Design Project]{../}
 Components of a Design
-
-
+--->
 

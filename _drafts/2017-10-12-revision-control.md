@@ -1,6 +1,6 @@
 ---
 layout: post
 title: Revision Control
-category: "2. Exploring Projects on OmniBuilds"
+category: "2. Exploring Designs on OmniBuilds"
 weight: 4
 ---

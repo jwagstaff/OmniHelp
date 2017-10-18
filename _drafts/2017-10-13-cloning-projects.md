@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cloning Projects
-category: "2. Exploring Projects on OmniBuilds"
+title: Cloning Designs
+category: "2. Exploring Designs on OmniBuilds"
 weight: 7
 ---
