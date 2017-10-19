@@ -11,7 +11,7 @@ Projects, Assemblies, and Parts are different design classes in Omnibuilds. Thes
  
 - **Projects**
 
-Projects are highest level design in the design hierarchy. Projects can have parts and assemblies under it in the "architecture tree". In some use cases projects can be added to under other projects. for example, say we created a new project similar to a raspberry pi called a blueberry pi. This blueberry pi is a great stand alone project consisting of many parts and assemblies. I now want to create a retro gaming machine and will now need to incorporate the 
+Projects are highest level design in the design hierarchy. Projects can have parts and assemblies under it in the "architecture tree". In some use cases projects can be added to under other projects. for example, say we created a new project similar to a raspberry pi called a blueberry pi. This blueberry pi is a great stand alone project consisting of many parts and assemblies. If I want to create retro gaming machine, I may have to embed the blueberry pi project as an assembly into this project.
 
  - **Assemblies**
 
@@ -23,6 +23,6 @@ Projects are highest level design in the design hierarchy. Projects can have par
  Parts are the lowest level design class in the design hierarchy. It is associated either under a project or assembly.
 
 
- It is **important** to remember that designs can change classes by adding parts and assemblies or taking away parts or assemblies to a specific design.
+ It is **important** to remember that designs can change classes by adding parts and assemblies or taking away parts and assemblies from their Bill of Materials.
 
  Every new design added to a project starts out as a part until you add sub-parts or assemblies to the design.

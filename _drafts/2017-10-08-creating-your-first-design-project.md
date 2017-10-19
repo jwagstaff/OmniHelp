@@ -2,7 +2,7 @@
 layout: post
 title: Creating Your First Design Project
 category: "2. Exploring Designs on OmniBuilds"
-weight: 1
+weight: 3
 ---
 
 

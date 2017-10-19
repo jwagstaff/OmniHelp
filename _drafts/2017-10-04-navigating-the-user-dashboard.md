@@ -16,7 +16,7 @@ The person icon on the top right of the dashboard and on any OmniBuilds page is 
 Shortcuts Menu*. The following can be accessible from this handy menu:
 	
 	1. Username        --     takes you to your Omnibuilds Dashboard
-	2. New Project     --     Creates a new Project
+	2. New Project     --     Creates a new Project Design
 	3. My Account      --     takes you to the account settings page
 	4. Logout          --     Logs you out of your account
 

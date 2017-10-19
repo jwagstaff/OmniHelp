@@ -7,15 +7,15 @@ weight: 2
 
 A **Bill of Materials** is a list of the raw materials, sub-assemblies, intermediate assemblies, sub-components, parts and the quantities of each needed to manufacture an end product.
 
-Hardware projects will usually have a Bill of Materials (BOM) associated with it.
+OmniBuilds projects and assemblies will have a Bill of Materials (BOM) associated with it.
 
 Remember there are three design classes in Omnibuilds: Projects, Assemblies, and Parts. It's important to know how BOMs relate to these design classes.
 
-- **Projects** are the highest level design class and will most always contain a BOM
+- **Projects** are the highest level design class and will always contain a BOM
 
 - **Assemblies** will be listed in a project's or master assembly's BOM **and** will have a BOM consisting of parts or sub-assemblies  
 
-- **Parts** is the lowest level design class. It will be listed in a project's BOM or in an assembly's BOM but it will never have BOM associated under it. It is stand-alone
+- **Parts** is the lowest level design class. It will be listed in a project's BOM or an assembly's BOM but it will never have BOM associated under it. It is a stand-alone design
 
 
 For example, let's use OmniBuilds to manage our designs for building a corvette.
