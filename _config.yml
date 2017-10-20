@@ -19,6 +19,14 @@ header_pages:
 # - README.md
 # - omnibuilds.md
 
+# Link slug for each help article
+permalink: /articles/:title/
+
+category_weights:
+  # values:
+    2: "Getting Started"
+    1: "Login & Registration"
+
 # Build settings
 markdown: kramdown
 theme: minima
@@ -29,6 +37,9 @@ exclude:
 # Plugins
 # plugins:
   # -
+
+#Gems
+gems: ['jekyll-lunr-js-search']
 
 # Analytics
 google_analytics: UA-105971114-1

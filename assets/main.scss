@@ -6,18 +6,26 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:300');
 
 
-/* Variables */
+/* ------------ VARIABLES ---------- */
 
+$shaded-background: hsl(0, 0%, 93%);
 $primary-color: rgb(85, 85, 85);
 $primary-font: 'Exo', sans-serif;
 $menu-width: auto;
+$body-width: 1100px;
+$spacing: 100px;
+$border-line: 1px solid #e8e8e8;
 
+/* ------------ HEADER ---------- */
 
-/* Header & */
+.site-header {
+  background-color: $shaded-background;
+  border-bottom: 0;
+}
 
 .site-title {
   margin: auto;
-  font: 30px $primary-font;
+  font: 32px $primary-font;
   color: $primary-color;
   line-height: 54px;
 
@@ -27,6 +35,7 @@ $menu-width: auto;
 }
 
 .site-nav {
+  border: 0px;
 
   &:visited {
     color: $primary-color;
@@ -35,27 +44,70 @@ $menu-width: auto;
   &:hover {
     color: $primary-color;
   }
-}
 
-.top-menu {
-  max-width: -webkit-calc(#{$menu-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$menu-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-  @extend %clearfix;
-
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$menu-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$menu-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+  @include media-query($on-palm) {
+    font-size: 80%;
+    background-color: transparent;
   }
 }
 
 
-/* Footer */
+/* ------------ SEARCH ---------- */
+
+.search-bar {
+  background-color: $shaded-background;
+  padding: 20px 0 30px 0;
+  text-align: center;
+  border-bottom: $border-line;
+}
+
+#search-header {
+  font: 28px $primary-font;
+}
+
+#search-field {
+  border-radius: 5px 0 0 5px;
+  border: 1px;
+  height: 40px;
+  width: calc(#{$body-width} - (#{$spacing} * 4));
+  vertical-align: bottom;
+}
+
+input[type=text] {
+  padding: 0 15px 0 15px;
+  font-size: 14px;
+}
+
+#search-button {
+  padding: 9px 15px;
+  height: 40px;
+  border: 1px;
+  border-radius: 0 5px 5px 0;
+  background-color: hsl(214,76%,78%);
+}
+
+
+/* ------------ FOOTER ---------- */
+
+body {
+  padding-bottom: 220px;
+}
+
+footer {
+  background-color: $shaded-background;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  min-height: 80px;
+  max-height: 80px;
+  align-items: center; /* align vertical */
+  border-top: $border-line;
+
+  @include media-query($on-laptop) {
+    min-height: 170px;
+    max-height: 170px;
+  }
+}
 
 .footer-heading {
   font-size: 1.25em;
@@ -64,4 +116,76 @@ $menu-width: auto;
 
 .footer-col-3 {
   text-align: right;
+
+  @include media-query($on-laptop) {
+    text-align: left;
+    padding-top: 20px;
+  }
+}
+
+
+/* ------------ QUICKSCROLL ---------- */
+
+// .quick-scroll {
+//   padding: 0 9px;
+// }
+
+
+/* ------------ FORMATTING ---------- */
+.category-head {
+  font-size: 22px !important;
+  // color: hsl(0, 0%, 40%);
+}
+
+h1 {
+  font: 28px $primary-font;
+}
+
+h4 {
+  font-size: 17px !important;
+}
+
+
+/* ------------ LAYOUT ---------- */
+
+.top-menu {
+  max-width: -webkit-calc(#{$menu-width} - (#{$spacing} * 2));
+  max-width:         calc(#{$menu-width} - (#{$spacing} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: $spacing;
+  padding-left: $spacing;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$body-width} - (#{$spacing}));
+    max-width:         calc(#{$body-width} - (#{$spacing}));
+    padding-right: $spacing / 2;
+    padding-left: $spacing / 2;
+  }
+}
+
+.page-wrapper {
+  max-width: -webkit-calc(#{$body-width} - (#{$spacing} * 2));
+  max-width:         calc(#{$body-width} - (#{$spacing} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing;
+  padding-left: $spacing;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$body-width} - (#{$spacing}));
+    max-width:         calc(#{$body-width} - (#{$spacing}));
+    padding-right: $spacing / 2;
+    padding-left: $spacing / 2;
+  }
+}
+
+
+/* ------------ POSTS ---------- */
+.post-navigation {
+  padding: 0 0 45px 0;
 }

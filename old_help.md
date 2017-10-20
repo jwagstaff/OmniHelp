@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How OmniBuilds Works
-permalink: /
+permalink: /old-help
 ---
 
 ### Everything is a Design
