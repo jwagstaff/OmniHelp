@@ -12,10 +12,10 @@ OmniBuilds is a tool for tracking engineering designs. Every thing in OmniBuilds
 
 **Assemblies** -- Associated under the project class and consists of parts
 
-**Parts**. -- the lowest level and contains no lower designs
+**Parts** -- the lowest level and contains no lower designs
 
-A versioning system is applied to every design and all of its subcomponents to keep track of the numerous changes a hardware design may undergo.
+A **versioning system** is applied to every design and all of its subcomponents to keep track of the numerous changes a hardware design may undergo.
 
-The OmniBuilds collaboration feature allows multiple people to make changes, comment, and access a single design. 
+The OmniBuilds **collaboration feature** allows multiple people to make changes, comment, and access a single design. 
 
-The project design is typically the root or the highest level of the hierarchy but there may be some use cases where it can be embedded into other projects. 
+
