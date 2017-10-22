@@ -89,14 +89,8 @@ input[type=text] {
 
 /* ------------ FOOTER ---------- */
 
-body {
-  padding-bottom: 220px;
-}
-
 footer {
   background-color: $shaded-background;
-  position: fixed;
-  bottom: 0px;
   width: 100%;
   min-height: 80px;
   max-height: 80px;
