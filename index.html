@@ -8,23 +8,29 @@ permalink: /
 <section id="search-results"></section>
 
 <div id="categories">
-  {% assign sorted_categories = site.categories | sort: site.categories[category_name] %}
-  {% for category in sorted_categories %}
-    <div class="category-group">
-      {% assign sorted_articles = category[1] | sort: 'weight' %}
-      {% capture category_name %}{{ category | first }}{% endcapture %}
-      <div id="#{{ category_name | slugize }}"></div>
-      <h4 class="category-head">{{ category_name }}</h4>
-      <a name="{{ category_name | slugize }}"></a>
-      {% for article in sorted_articles %}
-        <article class="post">
-          {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a>
-        </article>
-      {% endfor %}
-      <br>
-    </div>
+  {% assign weighted_categories = site.category_weights %}
+  {% assign sorted_categories = site.categories %}
+
+  {% for weighted_category in weighted_categories %}
+    {% for category in sorted_categories %}
+      <div class="category-group">
+        {% assign sorted_articles = category[1] | sort: 'weight' %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        {% if category_name == weighted_category %}
+          <div id="#{{ category_name | slugize }}"></div>
+          <h4 class="category-head">{{ category_name }}</h4>
+          <a name="{{ category_name | slugize }}"></a>
+          {% for article in sorted_articles %}
+            <article class="post">
+              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a>
+            </article>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endfor %}
   {% endfor %}
 </div>
+
 
 <!-- Scripts for Search Bar -->
 <script src="https://unpkg.com/lunr/lunr.js"></script>

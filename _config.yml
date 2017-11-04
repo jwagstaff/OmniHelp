@@ -22,10 +22,22 @@ header_pages:
 # Link slug for each help article
 permalink: /articles/:title/
 
-category_weights:
-  # values:
-    2: "Getting Started"
-    1: "Login & Registration"
+# category_weights: ['Account Settings', 'Getting Started']
+
+category_weights: [
+  'Getting Started',
+  'Exploring Designs on OmniBuilds',
+  'Account Settings',
+]
+  # 'Account Settings':
+  #   weight: 2
+
+  # 'Getting Started':
+  #   weight: 1
+
+  # 'Exploring Designs on OmniBuilds':
+  #   weight: 3
+
 
 # Build settings
 markdown: kramdown

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrading your account
-category: "3. Account Settings"
+category: "Account Settings"
 weight: 0
 ---
 

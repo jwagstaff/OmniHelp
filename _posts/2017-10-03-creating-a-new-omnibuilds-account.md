@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a New Omnibuilds Account
-category: "1. Getting Started"
+category: "Getting Started"
 weight: 3
 ---
 
