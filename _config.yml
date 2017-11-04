@@ -1,12 +1,12 @@
 title: OmniHelp
-author: Jeremiah Wagstaff
-email: jeremiah@omnibuilds.com
+author: Joanne Yeung
+email: joanne@omnibuilds.com
 site: https://www.omnibuilds.com
 description: > # this means to ignore newlines until "baseurl:"
   A help guide for OmniBuilds.com.
 
 # twitter_username:
-github_username: jwagstaff
+github_username: jttyeung
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

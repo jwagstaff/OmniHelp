@@ -8,8 +8,8 @@
 
 /* ------------ VARIABLES ---------- */
 
-$shaded-background: hsl(0, 0%, 93%);
-$primary-color: rgb(85, 85, 85);
+$shaded-background: hsl(0, 0%, 97%);
+$primary-color: rgb(76, 105, 114);
 $primary-font: 'Exo', sans-serif;
 $menu-width: auto;
 $body-width: 1100px;
@@ -25,8 +25,8 @@ $border-line: 1px solid #e8e8e8;
 
 .site-title {
   margin: auto;
-  font: 32px $primary-font;
-  color: $primary-color;
+  font: 33px $primary-font;
+  color: $primary-color !important;
   line-height: 54px;
 
   &:hover {
