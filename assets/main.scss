@@ -10,7 +10,8 @@
 
 $shaded-background: hsl(0, 0%, 97%);
 $primary-color: rgb(76, 105, 114);
-$secondary-color: hsl(0, 0%, 38%);
+$grey: hsl(0, 0%, 38%);
+$lighter-grey: hsl(0, 0%, 68%);
 $primary-font: 'Exo', sans-serif;
 $menu-width: auto;
 $body-width: 1100px;
@@ -137,7 +138,8 @@ footer {
 /* ------------ FORMATTING ---------- */
 .category-head {
   font-size: 22px !important;
-  color: $secondary-color;
+  color: $grey;
+  margin-bottom: 0;
 }
 
 .category-group {
@@ -152,12 +154,17 @@ h4 {
   font-size: 17px !important;
 }
 
+hr {
+  border-top: 1px solid $lighter-grey;
+  margin-bottom: 5px;
+}
+
 .post > a, svg {
   vertical-align: middle;
 }
 
 .post > svg {
-  fill: hsl(0, 0%, 68%);
+  fill: $lighter-grey;
 }
 
 /* ------------ LAYOUT ---------- */
