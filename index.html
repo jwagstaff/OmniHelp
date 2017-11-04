@@ -14,13 +14,14 @@ permalink: /
       {% assign sorted_articles = category[1] | sort: 'weight' %}
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div id="#{{ category_name | slugize }}"></div>
-      <h3 class="category-head">{{ category_name }}</h3>
+      <h4 class="category-head">{{ category_name }}</h4>
       <a name="{{ category_name | slugize }}"></a>
       {% for article in sorted_articles %}
         <article class="post">
-          <h4><a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a></h4>
+          {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a>
         </article>
       {% endfor %}
+      <br>
     </div>
   {% endfor %}
 </div>

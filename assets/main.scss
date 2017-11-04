@@ -10,6 +10,7 @@
 
 $shaded-background: hsl(0, 0%, 97%);
 $primary-color: rgb(76, 105, 114);
+$secondary-color: hsl(0, 0%, 38%);
 $primary-font: 'Exo', sans-serif;
 $menu-width: auto;
 $body-width: 1100px;
@@ -133,7 +134,7 @@ footer {
 /* ------------ FORMATTING ---------- */
 .category-head {
   font-size: 22px !important;
-  // color: hsl(0, 0%, 40%);
+  color: $secondary-color;
 }
 
 h1 {
@@ -144,6 +145,13 @@ h4 {
   font-size: 17px !important;
 }
 
+.post > a, svg {
+  vertical-align: middle;
+}
+
+svg {
+  fill: hsl(0, 0%, 68%);
+}
 
 /* ------------ LAYOUT ---------- */
 
