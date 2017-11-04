@@ -95,6 +95,8 @@ input[type=text] {
 footer {
   background-color: $shaded-background;
   width: 100%;
+  position: absolute;
+  bottom: 0;
   min-height: 80px;
   max-height: 80px;
   align-items: center; /* align vertical */
@@ -144,6 +146,11 @@ h4 {
 
 
 /* ------------ LAYOUT ---------- */
+
+body {
+  position: relative;
+  padding-bottom: 200px;
+}
 
 .top-menu {
   max-width: -webkit-calc(#{$menu-width} - (#{$spacing} * 2));
