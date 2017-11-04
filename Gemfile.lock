@@ -230,7 +230,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-lunr-js-search (~> 3.3)
+  jekyll-lunr-js-search
   jekyll-octicons
 
 BUNDLED WITH
