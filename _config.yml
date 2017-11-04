@@ -22,22 +22,14 @@ header_pages:
 # Link slug for each help article
 permalink: /articles/:title/
 
-# category_weights: ['Account Settings', 'Getting Started']
-
+# Category ordering:
+# Put a comma after each category title
+# Category titles must exactly match category title in posts (spelling, punctuation, capitalization)
 category_weights: [
   'Getting Started',
   'Exploring Designs on OmniBuilds',
   'Account Settings',
 ]
-  # 'Account Settings':
-  #   weight: 2
-
-  # 'Getting Started':
-  #   weight: 1
-
-  # 'Exploring Designs on OmniBuilds':
-  #   weight: 3
-
 
 # Build settings
 markdown: kramdown
@@ -47,10 +39,7 @@ exclude:
   - Gemfile.lock
 
 # Plugins
-plugins: ['jekyll-lunr-js-search', 'jekyll-octicons']
+plugins: ['jekyll-octicons']
 
 # Analytics
 google_analytics: UA-105971114-1
-
-lunr_search:
-  js_dir: "assets/js/"
