@@ -16,9 +16,10 @@ A help guide for [OmniBuilds.com][omnibuilds].
 4. Visit http://localhost:4000
 
 ### Authors
-[Jeremiah Wagstaff][jeremiah] is the founder and full-stack engineer.<br>
-[Joanne Yeung][joanne] is a full-stack engineer.<br>
-[Jake Pimental][jake]
+
+[Joanne Yeung][joanne] is a full-stack engineer and the project mainttainer. <br>
+[Jake Pimental][jake] is a cofounder and writes the help articles. <br>
+[Jeremiah Wagstaff][jeremiah] is the founder and provides creative direction.
 
 ### License
 This project is licensed under the [GNU GENERAL PUBLIC LICENSE][gnu].
