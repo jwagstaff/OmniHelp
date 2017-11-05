@@ -50,7 +50,7 @@ $(document).ready(function() {
       resultdiv.show();
       $('div#categories').hide();
       // Search for it
-      var result = index.search(query+'*');
+      var result = index.search(query+' *');
       // Show results
       resultdiv.empty();
       // Add status
