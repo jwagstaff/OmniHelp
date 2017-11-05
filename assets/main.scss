@@ -131,7 +131,7 @@ footer {
 /* ------------ NAVIGATION SIDEBAR ---------- */
 
 .navigation-sidebar {
-  padding: 0 15px;
+  padding: 0 25px;
   margin-right: 40px;
 }
 
@@ -239,7 +239,7 @@ body {
   width: 73%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 900px) {
   .flex-grid,
   .flex-grid-thirds {
     display: block;
