@@ -72,7 +72,7 @@ $primary-shadow: 1px 2px hsl(0, 0%, 88%);
   border-radius: 5px 0 0 5px;
   border: 1px;
   height: 40px;
-  width: calc(#{$body-width} - (#{$spacing} * 4));
+  width: calc(#{$body-width} - (#{$spacing} * 3));
   vertical-align: bottom;
   box-shadow: $primary-shadow;
 }
@@ -105,9 +105,13 @@ footer {
   min-height: 130px;
   align-items: center; /* align vertical */
   border-top: $border-line;
+  color: $lighter-grey;
 
   @include media-query($on-laptop) {
     min-height: 230px;
+    .col {
+      padding-bottom: 15px !important;
+    }
   }
 }
 
