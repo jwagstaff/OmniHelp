@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Designs Overview
-category: "2. Exploring Designs on OmniBuilds"
+category: "Exploring Designs on OmniBuilds"
 weight: 0
 ---
 

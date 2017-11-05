@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Changing Your Account Email
-category: "3. Account Settings"
+category: "Account Settings"
 weight: 2
 ---
 
