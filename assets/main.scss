@@ -102,14 +102,12 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  min-height: 80px;
-  max-height: 80px;
+  min-height: 130px;
   align-items: center; /* align vertical */
   border-top: $border-line;
 
   @include media-query($on-laptop) {
-    min-height: 170px;
-    max-height: 170px;
+    min-height: 230px;
   }
 }
 
@@ -131,7 +129,7 @@ footer {
 /* ------------ NAVIGATION SIDEBAR ---------- */
 
 .navigation-sidebar {
-  // padding: 0 0 0 25px;
+  color: $grey;
 }
 
 
@@ -178,7 +176,7 @@ html {
 
 body {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 230px;
   min-height: 100%;
 }
 
@@ -189,15 +187,15 @@ body {
   margin-left: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-right: $spacing;
-  padding-left: $spacing;
+  padding-right: $spacing / 4;
+  padding-left: $spacing / 4;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$body-width} - (#{$spacing}));
-    max-width:         calc(#{$body-width} - (#{$spacing}));
-    padding-right: $spacing / 2;
-    padding-left: $spacing / 2;
+    max-width: -webkit-calc(#{$body-width} - (#{$spacing} * 2));
+    max-width:         calc(#{$body-width} - (#{$spacing} * 2));
+    padding-right: $spacing / 20;
+    padding-left: $spacing / 20;
   }
 }
 
@@ -211,8 +209,8 @@ body {
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$body-width} - (#{$spacing}));
-    max-width:         calc(#{$body-width} - (#{$spacing}));
+    max-width: -webkit-calc(#{$body-width} - (#{$spacing} * 2));
+    max-width:         calc(#{$body-width} - (#{$spacing} * 2));
     padding-right: $spacing / 2;
     padding-left: $spacing / 2;
   }
