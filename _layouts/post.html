@@ -4,8 +4,8 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="post-navigation">
-    <a href="{{ site.url}}">{{ site.title }}</a> &nbsp; / &nbsp;
-    <a href="{{ site.url}}#{{ page.category }}">{{ page.category | escape }}</a> &nbsp; / &nbsp;
+    <a href="{{ site.url }}">{{ site.title }}</a> &nbsp; / &nbsp;
+    <a href="{{ site.url }}/categories/{{ page.category | slugify }}">{{ page.category | escape }}</a> &nbsp; / &nbsp;
     {{ page.title | escape }}
   </div>
 
