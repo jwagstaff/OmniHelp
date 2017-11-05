@@ -1,11 +1,9 @@
-<nav class="quick-scroll">
-  <label for="quick-scroll">
+<nav class="navigation-sidebar">
+  <label for="navigation-sidebar">
     <div class="menu-icon">
       Select Topic:
       {% for category in site.categories %}
-        <li><a name="{{ category | first }}">{{ category | first }}</a>
-        </li>
-        </div>
+        <li><a name="{{ category | first }}">{{ category | first }}</a></li>
       {% endfor %}
     </div>
   </label>

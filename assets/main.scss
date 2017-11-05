@@ -232,11 +232,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.flex-grid-two-thirds .col {
-  width: 28%;
+.flex-grid-thirds .col {
+  width: 27%;
 }
-.flex-grid-two-thirds .col:last-child {
-  width: 71%;
+.flex-grid-thirds .col:last-child {
+  width: 73%;
 }
 
 @media (max-width: 400px) {
