@@ -147,16 +147,43 @@ footer {
 }
 
 h1 {
-  font: 28px $primary-font;
+  font: 32px $primary-font;
+  margin-top: 0px;
+  margin-bottom: 5px;
+
 }
 
-h4 {
-  font-size: 17px !important;
+.post-content > h2 {
+  font: 28px $primary-font;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.post-content > h3 {
+  font: 20px $primary-font;
+}
+
+.post-content > h4 {
+  font: 16px $primary-font;
+}
+
+.post-content > h5 {
+  font: 12px $primary-font;
+}
+
+.post-content > h6 {
+  font: 8px $primary-font;
+}
+
+blockquote {
+  font-style: normal;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 hr {
   border-top: 1px solid $lighter-grey;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .post > a, svg {

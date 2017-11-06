@@ -26,6 +26,7 @@ permalink: /articles/:title/
 # Put a comma after each category title
 # Category titles must exactly match category title in posts (spelling, punctuation, capitalization)
 category_weights: [
+  'BootCamp',
   'Getting Started',
   'Exploring Designs on OmniBuilds',
   'Account Settings',
