@@ -17,7 +17,7 @@ A help guide for [OmniBuilds.com][omnibuilds].
 
 ### Authors
 
-[Joanne Yeung][joanne] is a full-stack engineer and the project mainttainer. <br>
+[Joanne Yeung][joanne] is a full-stack engineer and the project maintainer. <br>
 [Jake Pimental][jake] is a cofounder and writes the help articles. <br>
 [Jeremiah Wagstaff][jeremiah] is the founder and provides creative direction.
 
