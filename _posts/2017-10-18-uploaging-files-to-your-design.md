@@ -28,7 +28,7 @@ Common design file types may include: DXF, DWG, PRD, TIFF, HPGL, IGES, STEP, and
 - See the **version history** of uploaded files (List of any updates or changes to a specific file)
 - **Delete** the file from the design
 
-Realize collaborators will have these same abilities when working together on designs.
+Collaborators will have these same abilities when working together on designs.
 
 
 
