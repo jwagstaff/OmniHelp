@@ -8,13 +8,16 @@
 
 /* ------------ VARIABLES ---------- */
 
-$shaded-background: hsl(0, 0%, 93%);
-$primary-color: rgb(85, 85, 85);
+$shaded-background: hsl(0, 0%, 97%);
+$primary-color: rgb(76, 105, 114);
+$grey: hsl(0, 0%, 38%);
+$lighter-grey: hsl(0, 0%, 68%);
 $primary-font: 'Exo', sans-serif;
 $menu-width: auto;
 $body-width: 1100px;
 $spacing: 100px;
 $border-line: 1px solid #e8e8e8;
+$primary-shadow: 1px 2px hsl(0, 0%, 88%);
 
 /* ------------ HEADER ---------- */
 
@@ -25,8 +28,8 @@ $border-line: 1px solid #e8e8e8;
 
 .site-title {
   margin: auto;
-  font: 32px $primary-font;
-  color: $primary-color;
+  font: 33px $primary-font;
+  color: $primary-color !important;
   line-height: 54px;
 
   &:hover {
@@ -71,6 +74,7 @@ $border-line: 1px solid #e8e8e8;
   height: 40px;
   width: calc(#{$body-width} - (#{$spacing} * 4));
   vertical-align: bottom;
+  box-shadow: $primary-shadow;
 }
 
 input[type=text] {
@@ -84,20 +88,20 @@ input[type=text] {
   border: 1px;
   border-radius: 0 5px 5px 0;
   background-color: hsl(214,76%,78%);
+  box-shadow: $primary-shadow;
 }
 
+.result-title {
+  font-size: 20px;
+}
 
 /* ------------ FOOTER ---------- */
 
-body {
-  padding-bottom: 220px;
-}
-
 footer {
   background-color: $shaded-background;
-  position: fixed;
-  bottom: 0px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
   min-height: 80px;
   max-height: 80px;
   align-items: center; /* align vertical */
@@ -134,7 +138,12 @@ footer {
 /* ------------ FORMATTING ---------- */
 .category-head {
   font-size: 22px !important;
-  // color: hsl(0, 0%, 40%);
+  color: $grey;
+  margin-bottom: 0;
+}
+
+.category-group {
+  padding-bottom: 0.5em;
 }
 
 h1 {
@@ -145,8 +154,31 @@ h4 {
   font-size: 17px !important;
 }
 
+hr {
+  border-top: 1px solid $lighter-grey;
+  margin-bottom: 5px;
+}
+
+.post > a, svg {
+  vertical-align: middle;
+}
+
+.post > svg {
+  fill: $lighter-grey;
+}
 
 /* ------------ LAYOUT ---------- */
+
+html {
+  height: 100%;
+}
+
+
+body {
+  position: relative;
+  padding-bottom: 200px;
+  min-height: 100%;
+}
 
 .top-menu {
   max-width: -webkit-calc(#{$menu-width} - (#{$spacing} * 2));

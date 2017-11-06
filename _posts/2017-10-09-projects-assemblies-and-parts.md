@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Projects, Assemblies, and Parts 
-category: "2. Exploring Designs on OmniBuilds"
+category: "Exploring Designs on OmniBuilds"
 weight: 2
 ---
 

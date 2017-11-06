@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How OmniBuilds Works
-category: "1. Getting Started"
+category: "Getting Started"
 weight: 1
 ---
 
