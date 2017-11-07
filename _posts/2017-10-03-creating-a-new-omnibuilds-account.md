@@ -12,7 +12,6 @@ Omnibuilds offers free accounts for public users and open source projects, as we
 
 # Signing up for an account #
 
-
 {:.post-image}
 ![homepage-signup.png](/assets/images/homepage-signup.png)
 
