@@ -19,18 +19,6 @@ header_pages:
 # - README.md
 # - omnibuilds.md
 
-# Link slug for each help article
-permalink: /articles/:title/
-
-# Category ordering:
-# Put a comma after each category title
-# Category titles must exactly match category title in posts (spelling, punctuation, capitalization)
-category_weights: [
-  'Getting Started',
-  'Exploring Designs on OmniBuilds',
-  'Account Settings',
-]
-
 # Build settings
 markdown: kramdown
 theme: minima
@@ -43,3 +31,28 @@ plugins: ['jekyll-octicons']
 
 # Analytics
 google_analytics: UA-105971114-1
+
+# Link slug for each help article
+permalink: /articles/:title/
+
+# Generates pages for each category
+collections:
+  category:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+
+# Category ordering:
+# Put a comma after each category title
+# Category titles must exactly match category title in posts (spelling, punctuation, capitalization)
+category_weights: [
+  'Getting Started',
+  'Exploring Designs on OmniBuilds',
+  'Account Settings',
+]
