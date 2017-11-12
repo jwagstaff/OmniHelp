@@ -241,10 +241,9 @@ body {
 
 .flex-grid-thirds .col {
   width: 27%;
-}
 
 .flex-grid-thirds .col:last-child {
-  width: 71%;
+  width: 73%;
 }
 
 @media (max-width: $on-laptop) {
@@ -276,14 +275,14 @@ body {
 
 
 .post-image{
- 
+
   text-align: center;
   margin-bottom:0;
   image-width: 100%;
   border-top: 1px solid rgba(211,211,211, 1);
   border-left: 1px solid rgba(211,211,211, 1);
   border-right: 1px solid rgba(211,211,211, 1);
-  
+
 }
 
  .image-text{

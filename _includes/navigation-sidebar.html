@@ -21,6 +21,12 @@
             </div>
           {% endfor %}
         </div>
+      Select Topic:
+      {% for category in site.categories %}
+        <li><a name="{{ category | first }}">{{ category | first }}</a>
+        </li>
+        </div>
+      {% endfor %}
     </div>
   </label>
 </nav>
