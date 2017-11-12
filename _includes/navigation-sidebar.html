@@ -5,9 +5,13 @@
         <div class="category-group">
         {% for category in site.categories %}
           <article class="post">
-            {% octicon arrow-small-right %} <a name="{{ category | first }}">{{ category | first }}</a>
+            {% octicon arrow-small-right %} <a href="{{ site.url }}/categories/{{ category | first | slugify }}" name="{{ category | first }}">{{ category | first }}</a>
           </article>
         {% endfor %}
+        <br>
+        <article class="post">
+            {% octicon arrow-small-right %} <a href="{{ site.url }}" name="All">All Categories</a>
+        </article>
         </div>
     </div>
   </label>
