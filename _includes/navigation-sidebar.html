@@ -2,9 +2,11 @@
   <label for="navigation-sidebar">
     <div class="menu-icon">
       <h4>Jump to a Category:</h4>
-        <div id="categories">
+        <div class="category-group">
         {% for category in site.categories %}
-          <li><a name="{{ category | first }}">{{ category | first }}</a></li>
+          <article class="post">
+            {% octicon arrow-small-right %} <a name="{{ category | first }}">{{ category | first }}</a>
+          </article>
         {% endfor %}
         </div>
     </div>

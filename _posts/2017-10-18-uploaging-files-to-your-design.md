@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Files to Your Design
-category: "2. Exploring Designs on OmniBuilds"
+category: "Exploring Designs on OmniBuilds"
 weight: 3.5
 ---
 
