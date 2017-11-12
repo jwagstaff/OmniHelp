@@ -1,32 +1,12 @@
 <nav class="navigation-sidebar">
   <label for="navigation-sidebar">
     <div class="menu-icon">
-      <h4>Jump to a Topic:</h4>
+      <h4>Jump to a Category:</h4>
         <div id="categories">
-          {% assign weighted_categories = site.category_weights %}
-          {% assign categories = site.categories %}
-          {% assign page_category = page.category %}
-
-          {% for category in categories %}
-            <div class="category-group">
-              {% assign sorted_articles = category[1] | sort: 'weight' %}
-              {% capture category_name %}{{ category | first }}{% endcapture %}
-              {% if category_name == page_category %}
-                {% for article in sorted_articles %}
-                  <article class="post">
-                    {% octicon arrow-small-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{ article.title }}</a>
-                  </article>
-                {% endfor %}
-              {% endif %}
-            </div>
-          {% endfor %}
+        {% for category in site.categories %}
+          <li><a name="{{ category | first }}">{{ category | first }}</a></li>
+        {% endfor %}
         </div>
-      Select Topic:
-      {% for category in site.categories %}
-        <li><a name="{{ category | first }}">{{ category | first }}</a>
-        </li>
-        </div>
-      {% endfor %}
     </div>
   </label>
 </nav>
