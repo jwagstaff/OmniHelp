@@ -16,18 +16,22 @@ permalink: /
       <div class="category-group">
         {% assign sorted_articles = category[1] | sort: 'weight' %}
         {% capture category_name %}{{ category | first }}{% endcapture %}
-        {% if category_name == weighted_category %}
+        {% if category_name != page_title %}
+          {% continue %}
+        {% else %}
           <div id="#{{ category_name | slugify }}"></div>
           <h4 class="category-head">{{ category_name }}</h4>
           <a name="{{ category_name | slugify }}"></a>
           <hr>
           {% for article in sorted_articles %}
             <article class="post">
-              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a>
+              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a>
             </article>
           {% endfor %}
         {% endif %}
       </div>
+    {% endfor %}
+  </div>
     {% endfor %}
   {% endfor %}
 </div>

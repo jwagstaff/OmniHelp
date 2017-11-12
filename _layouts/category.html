@@ -17,7 +17,9 @@ layout: default
       <div class="category-group">
         {% assign sorted_articles = category[1] | sort: 'weight' %}
         {% capture category_name %}{{ category | first }}{% endcapture %}
-        {% if category_name == page_title %}
+        {% if category_name != page_title %}
+          {% continue %}
+        {% else %}
           <div id="#{{ category_name | slugify }}"></div>
           <h4 class="category-head">{{ category_name }}</h4>
           <a name="{{ category_name | slugify }}"></a>
