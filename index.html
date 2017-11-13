@@ -25,13 +25,11 @@ permalink: /
           <hr>
           {% for article in sorted_articles %}
             <article class="post">
-              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a>
+              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{ article.url }}">{{  article.title }}</a>
             </article>
           {% endfor %}
         {% endif %}
       </div>
-    {% endfor %}
-  </div>
     {% endfor %}
   {% endfor %}
 </div>
