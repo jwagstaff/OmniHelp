@@ -26,7 +26,7 @@ layout: default
           <hr>
           {% for article in sorted_articles %}
             <article class="post">
-              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{  article.url }}">{{  article.title }}</a>
+              {% octicon chevron-right %} <a href="{{ site.url }}{{ site.baseurl }}{{ article.url }}">{{  article.title }}</a>
             </article>
           {% endfor %}
         {% endif %}
@@ -34,6 +34,4 @@ layout: default
     {% endfor %}
   </div>
 
-  <br>
-  <a href="{{ site.url }}">Back to All Categories</a></span>
 </article>

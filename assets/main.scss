@@ -272,6 +272,27 @@ body {
   }
 }
 
+.page-navigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.page-navigation a {
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+    &.next0 {
+      float: right;
+      width: auto;
+    }
+}
+
+.page-navigation .next {
+  text-align: right;
+}
+
 .post-image{
   text-align: center;
   margin-bottom:0;
