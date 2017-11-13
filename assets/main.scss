@@ -330,3 +330,26 @@ body {
   z-index: 10;
   margin-bottom: 4em;
 }
+
+
+
+.post-image{
+ 
+  text-align: center;
+  margin-bottom:0;
+  image-width: 100%;
+  border-top: 1px solid rgba(211,211,211, 1);
+  border-left: 1px solid rgba(211,211,211, 1);
+  border-right: 1px solid rgba(211,211,211, 1);
+  
+}
+
+ .image-text{
+  border-bottom: 1px solid rgba(211,211,211, 1);
+  border-left: 1px solid rgba(211,211,211, 1);
+  border-right: 1px solid rgba(211,211,211, 1);
+  border-top: 1px solid rgba(211,211,211, 1);
+  padding: 2em;
+  z-index: 10;
+  margin-bottom: 4em;
+}
