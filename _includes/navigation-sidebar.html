@@ -1,12 +1,18 @@
-<nav class="quick-scroll">
-  <label for="quick-scroll">
+<nav class="navigation-sidebar">
+  <label for="navigation-sidebar">
     <div class="menu-icon">
-      Select Topic:
+      <h4>Jump to a Category:</h4>
+      <div class="category-group">
       {% for category in site.categories %}
-        <li><a name="{{ category | first }}">{{ category | first }}</a>
-        </li>
-        </div>
+        <article class="post">
+          {% octicon arrow-small-right %} <a href="{{ site.url }}/categories/{{ category | first | slugify }}" name="{{ category | first }}">{{ category | first }}</a>
+        </article>
       {% endfor %}
+      <br>
+      <article class="post">
+          {% octicon arrow-small-right %} <a href="{{ site.url }}" name="All">All Categories</a>
+      </article>
+      </div>
     </div>
   </label>
 </nav>

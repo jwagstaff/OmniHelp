@@ -72,7 +72,7 @@ $primary-shadow: 1px 2px hsl(0, 0%, 88%);
   border-radius: 5px 0 0 5px;
   border: 1px;
   height: 40px;
-  width: calc(#{$body-width} - (#{$spacing} * 4));
+  width: calc(#{$body-width} - (#{$spacing} * 3));
   vertical-align: bottom;
   box-shadow: $primary-shadow;
 }
@@ -102,14 +102,16 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  min-height: 80px;
-  max-height: 80px;
+  min-height: 130px;
   align-items: center; /* align vertical */
   border-top: $border-line;
+  color: $lighter-grey;
 
   @include media-query($on-laptop) {
-    min-height: 170px;
-    max-height: 170px;
+    min-height: 230px;
+    .col {
+      padding-bottom: 15px !important;
+    }
   }
 }
 
@@ -128,11 +130,11 @@ footer {
 }
 
 
-/* ------------ QUICKSCROLL ---------- */
+/* ------------ NAVIGATION SIDEBAR ---------- */
 
-// .quick-scroll {
-//   padding: 0 9px;
-// }
+.navigation-sidebar {
+  color: $grey;
+}
 
 
 /* ------------ FORMATTING ---------- */
@@ -157,6 +159,7 @@ h4 {
 
 hr {
   border-top: 1px solid $lighter-grey;
+  border-bottom: none;
   margin-bottom: 5px;
 }
 
@@ -168,6 +171,7 @@ hr {
   fill: $lighter-grey;
 }
 
+
 /* ------------ LAYOUT ---------- */
 
 html {
@@ -177,7 +181,7 @@ html {
 
 body {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 230px;
   min-height: 100%;
 }
 
@@ -188,15 +192,15 @@ body {
   margin-left: auto;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-right: $spacing;
-  padding-left: $spacing;
+  padding-right: $spacing / 4;
+  padding-left: $spacing / 4;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$body-width} - (#{$spacing}));
-    max-width:         calc(#{$body-width} - (#{$spacing}));
-    padding-right: $spacing / 2;
-    padding-left: $spacing / 2;
+    max-width: -webkit-calc(#{$body-width} - (#{$spacing} * 2));
+    max-width:         calc(#{$body-width} - (#{$spacing} * 2));
+    padding-right: $spacing / 20;
+    padding-left: $spacing / 20;
   }
 }
 
@@ -210,17 +214,122 @@ body {
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$body-width} - (#{$spacing}));
-    max-width:         calc(#{$body-width} - (#{$spacing}));
+    max-width: -webkit-calc(#{$body-width} - (#{$spacing} * 2));
+    max-width:         calc(#{$body-width} - (#{$spacing} * 2));
     padding-right: $spacing / 2;
     padding-left: $spacing / 2;
   }
 }
 
 
+/* ------------ FLEX GRID ---------- */
+
+.flex-grid {
+  display: flex;
+}
+
+.flex-grid .col {
+  flex: 1;
+}
+
+.flex-grid-thirds {
+  padding-right: $spacing / 3;
+  padding-left: $spacing / 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid-thirds .col {
+  width: 25%;
+}
+
+.flex-grid-thirds .col:last-child {
+  width: 74%;
+}
+
+@media (max-width: $on-laptop) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col, .col:last-child {
+      width: 100%;
+      padding-right: $spacing / 20;
+      padding-left: $spacing / 20;
+      padding-bottom: $spacing / 2;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 /* ------------ POSTS ---------- */
 .post-navigation {
   padding: 0 0 45px 0;
+  @media (max-width: $on-laptop) {
+    display: none;
+  }
+}
+
+.page-navigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.page-navigation a {
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+    &.next0 {
+      float: right;
+      width: auto;
+    }
+}
+
+.page-navigation .next {
+  text-align: right;
+}
+
+.post-image {
+  text-align: center;
+  margin-bottom:0;
+  image-width: 100%;
+  border-top: 1px solid rgba(211,211,211, 1);
+  border-left: 1px solid rgba(211,211,211, 1);
+  border-right: 1px solid rgba(211,211,211, 1);
+}
+
+.image-text {
+  border-bottom: 1px solid rgba(211,211,211, 1);
+  border-left: 1px solid rgba(211,211,211, 1);
+  border-right: 1px solid rgba(211,211,211, 1);
+  border-top: 1px solid rgba(211,211,211, 1);
+  padding: 2em;
+  z-index: 10;
+  margin-bottom: 4em;
+}
+
+.post-image {
+  text-align: center;
+  margin-bottom:0;
+  image-width: 100%;
+  border-top: 1px solid rgba(211,211,211, 1);
+  border-left: 1px solid rgba(211,211,211, 1);
+  border-right: 1px solid rgba(211,211,211, 1);
+}
+
+.image-text {
+  border-bottom: 1px solid rgba(211,211,211, 1);
+  border-left: 1px solid rgba(211,211,211, 1);
+  border-right: 1px solid rgba(211,211,211, 1);
+  border-top: 1px solid rgba(211,211,211, 1);
+  padding: 2em;
+  z-index: 10;
+  margin-bottom: 4em;
 }
 
 

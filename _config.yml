@@ -39,6 +39,7 @@ permalink: /articles/:title/
 collections:
   category:
     output: true
+    permalink: /categories/:title/
 
 defaults:
   -
