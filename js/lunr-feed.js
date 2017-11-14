@@ -3,7 +3,7 @@
 ---
 // builds lunr
 var index = lunr(function () {
-  this.field('title');
+  this.field('title', {boost: 10});
   this.field('content');
   this.field('category');
   this.field('tags');
@@ -12,11 +12,11 @@ var index = lunr(function () {
   {% assign count = 0 %}
   {% for post in site.posts %}
   this.add({
-    title: {{post.title | jsonify}},
-    category: {{post.category | jsonify}},
-    content: {{post.content | strip_html | jsonify}},
-    tags: {{post.tags | jsonify}},
-    id: {{count}}
+    title: {{ post.title | jsonify }},
+    category: {{ post.category | jsonify }},
+    content: {{ post.content | strip_html | jsonify }},
+    tags: {{ post.tags | jsonify }},
+    id: {{ count }}
   });{% assign count = count | plus: 1 %}{% endfor %}
   console.log( jQuery.type(index) );
 
@@ -25,7 +25,7 @@ var index = lunr(function () {
 
 // builds reference data
 var store = [{% for post in site.posts %}{
-  "title": {{post.title | jsonify}},
+  "title": {{ post.title | jsonify }},
   "link": {{ post.url | jsonify }},
   "image": {{ post.image | jsonify }},
   "date": {{ post.date | date: '%B %-d, %Y' | jsonify }},
@@ -50,7 +50,7 @@ $(document).ready(function() {
       resultdiv.show();
       $('div#categories').hide();
       // Search for it
-      var result = index.search(query+' *');
+      var result = index.search(query);
       // Show results
       resultdiv.empty();
       // Add status
