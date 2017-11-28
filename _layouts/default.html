@@ -6,6 +6,9 @@
   <body>
 
     {% include header.html %}
+    {% if page.permalink == '/' %}
+      {% include search-bar.html %}
+    {% endif %}
 
     <main class="page-content" aria-label="Content">
       <div class="flex-grid-thirds">
