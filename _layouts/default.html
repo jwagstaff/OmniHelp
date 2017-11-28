@@ -13,10 +13,16 @@
     <main class="page-content" aria-label="Content">
       <div class="flex-grid-thirds">
         <div class="col">
+          {% if page.permalink != '/' %}
+            <div class="post-navigation"> &nbsp;
+            </div>
+          {% endif %}
           {% include navigation-sidebar.html %}
         </div>
-        <div class="col">
+        <div class="col-second">
           {{ content }}
+        </div>
+        <div class="col">
         </div>
       </div>
     </main>

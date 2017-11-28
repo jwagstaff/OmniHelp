@@ -225,11 +225,15 @@ body {
 }
 
 .flex-grid-thirds .col {
-  width: 23%;
+  width: 20%;
+}
+
+.flex-grid-thirds .col-second {
+  width: 58%;
 }
 
 .flex-grid-thirds .col:last-child {
-  width: 74%;
+  width: 20%;
 }
 
 @media (max-width: $on-laptop) {
