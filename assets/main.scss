@@ -132,8 +132,27 @@ footer {
 
 /* ------------ NAVIGATION SIDEBAR ---------- */
 
-.navigation-sidebar {
-  color: $grey;
+// creates a row like in bootstrap
+.row:before,
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+.nav-bullet {
+  width: 8%;
+  float: left;
+}
+
+.nav-link {
+  width: 92%;
+  float: right;
+}
+
+.all-categories {
+  padding-top: 0.7em;
+  padding-bottom: 2em;
 }
 
 
@@ -167,7 +186,7 @@ hr {
   vertical-align: middle;
 }
 
-.post > svg {
+.post > svg, .nav-link, .nav-bullet {
   fill: $lighter-grey;
 }
 
@@ -228,8 +247,8 @@ body {
   width: 20%;
 }
 
-.flex-grid-thirds .col-second {
-  width: 58%;
+.flex-grid-thirds .col:nth-child(2) {
+  width: 56%;
 }
 
 .flex-grid-thirds .col:last-child {
@@ -240,7 +259,7 @@ body {
   .flex-grid,
   .flex-grid-thirds {
     display: block;
-    .col, .col:last-child {
+    .col, .col:nth-child(2) {
       width: 100%;
       padding-right: $spacing / 20;
       padding-left: $spacing / 20;

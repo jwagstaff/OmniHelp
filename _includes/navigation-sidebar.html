@@ -1,18 +1,24 @@
 <nav class="navigation-sidebar">
   <label for="navigation-sidebar">
-    <div class="menu-icon">
-      <h4>Jump to a Category:</h4>
-      <div class="category-group">
-      {% for category in site.categories %}
-        <article class="post">
-          {% octicon arrow-small-right %} <a href="{{ site.url }}/categories/{{ category | first | slugify }}" name="{{ category | first }}">{{ category | first }}</a>
-        </article>
-      {% endfor %}
-      <br>
-      <article class="post">
-          {% octicon arrow-small-right %} <a href="{{ site.url }}" name="All">All Categories</a>
+    <h4>Jump to a Category:</h4>
+    <div class="category-group">
+
+    {% for category in site.categories %}
+      <article class="post row">
+        <div class="nav-bullet">{% octicon arrow-small-right %}</div>
+        <div class="nav-link">
+          <a href="{{ site.url }}/categories/{{ category | first | slugify }}" name="{{ category | first }}">{{ category | first }}</a>
+        </div>
       </article>
+    {% endfor %}
+
+    <article class="post row">
+      <div class="nav-bullet all-categories">{% octicon arrow-small-right %}</div>
+      <div class="nav-link all-categories">
+        <a href="{{ site.url }}" name="All">All Categories</a>
       </div>
+    </article>
+
     </div>
   </label>
 </nav>
