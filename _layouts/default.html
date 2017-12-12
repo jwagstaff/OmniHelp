@@ -6,14 +6,22 @@
   <body>
 
     {% include header.html %}
+    {% if page.permalink == '/' %}
+      {% include search-bar.html %}
+    {% endif %}
 
     <main class="page-content" aria-label="Content">
       <div class="flex-grid-thirds">
         <div class="col">
+          {% if page.permalink != '/' %}
+            <div class="post-navigation"> &nbsp; </div>
+          {% endif %}
           {% include navigation-sidebar.html %}
         </div>
         <div class="col">
           {{ content }}
+        </div>
+        <div class="col">
         </div>
       </div>
     </main>
